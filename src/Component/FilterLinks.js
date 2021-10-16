@@ -6,7 +6,7 @@ function FilterLinks({ Heading, datas }) {
  useEffect(()=>{
  setTimeout(()=>{
   setData(datas)
- },50)
+ },500)
  },[setData,datas])
   return (
     
@@ -34,7 +34,7 @@ function FilterLinks({ Heading, datas }) {
           <h4>{Heading}</h4>
           {data.length>0?data.map((a)=>{
   return <h5><a rel="noreferrer" target="_blank" href={a} key={a}>{a}</a></h5>
-}):"No Broken External Links"}
+}):<h5>No Broken External Links</h5>}
         
         </>
       )}
