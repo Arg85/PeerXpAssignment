@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/PeerXpAssignment/static/css/main.97f693be.chunk.css",
+    "main.js": "/PeerXpAssignment/static/js/main.4929bfeb.chunk.js",
+    "main.js.map": "/PeerXpAssignment/static/js/main.4929bfeb.chunk.js.map",
+    "runtime-main.js": "/PeerXpAssignment/static/js/runtime-main.59d0ece3.js",
+    "runtime-main.js.map": "/PeerXpAssignment/static/js/runtime-main.59d0ece3.js.map",
+    "static/js/2.95f0513d.chunk.js": "/PeerXpAssignment/static/js/2.95f0513d.chunk.js",
+    "static/js/2.95f0513d.chunk.js.map": "/PeerXpAssignment/static/js/2.95f0513d.chunk.js.map",
+    "static/js/3.c1e9d16e.chunk.js": "/PeerXpAssignment/static/js/3.c1e9d16e.chunk.js",
+    "static/js/3.c1e9d16e.chunk.js.map": "/PeerXpAssignment/static/js/3.c1e9d16e.chunk.js.map",
+    "index.html": "/PeerXpAssignment/index.html",
+    "static/css/main.97f693be.chunk.css.map": "/PeerXpAssignment/static/css/main.97f693be.chunk.css.map",
+    "static/js/2.95f0513d.chunk.js.LICENSE.txt": "/PeerXpAssignment/static/js/2.95f0513d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.59d0ece3.js",
+    "static/js/2.95f0513d.chunk.js",
+    "static/css/main.97f693be.chunk.css",
+    "static/js/main.4929bfeb.chunk.js"
+  ]
+}
