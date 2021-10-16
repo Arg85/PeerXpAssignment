@@ -1,7 +1,6 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../Css/PostsScreen.css"
-import PostCardComponent from "../Component/PostCardComponent";
 import FilterPost from "../Component/FilterPosts";
 function PostsScreen() {
   const [allPosts, setAllPosts] = useState(0);
