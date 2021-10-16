@@ -6,6 +6,7 @@ function LinksScreen() {
   const [allPosts, setAllPosts] = useState(0);
   const [brokenInternal, setBrokenInternal] = useState([]);
   const [brokenExternal, setBrokenExternal] = useState([]);
+  const [totalLinks, setTotalLinks] = useState([]);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const fetchData = async () => {
@@ -27,14 +28,17 @@ function LinksScreen() {
   useEffect(()=>{
     const BrokenInternal=[]
     const BrokenExternal=[]
+  
+    // const WorkingLinks=allPosts.forEach((a)=>fetch())
     const InternalLinks = Object.entries(allPosts).filter((post) =>
     post[1].url.includes("https://ghost-blog.ipxp.in/")
   );
   const ExternalLinks=Object.entries(allPosts).filter(post=>!post[1].url.includes("https://ghost-blog.ipxp.in/"))
+  setTotalLinks((InternalLinks.length+ExternalLinks.length))
  if(ExternalLinks.length>0){
    ExternalLinks.forEach((a)=>{
-    fetch(allPosts).then((res) => {
-      if (res.status < 300) {
+    fetch(a).then((res) => {
+      if (res.status > 300) {
         BrokenExternal.push(a[1].url);
       }
     });
@@ -45,7 +49,7 @@ function LinksScreen() {
 
     InternalLinks.forEach((Link) => {
       fetch(Link).then((res) => {
-        if (res.status < 300) {
+        if (res.status > 300) {
           BrokenInternal.push(Link[1].url);
         }
       });
@@ -62,8 +66,8 @@ function LinksScreen() {
     
     <div className="postFilterCards">
 
-                  <FilterLinks key={1} Heading="Total Link Count" datas={allPosts.length}/>
-                  <FilterLinks key={21} Heading="Total Broken Internal Links" datas={brokenInternal}/>
+                  <FilterLinks key={1} Heading="Total Link Count" datas={totalLinks}/>
+                  <FilterLinks key={2} Heading="Total Broken Internal Links" datas={brokenInternal}/>
                   <FilterLinks key={3} Heading="Total Broken External Links" datas={brokenExternal}/>
     </div>
     </>

@@ -5,9 +5,9 @@ function FilterLinks({ Heading, datas }) {
  const [data, setData] = useState([])
  useEffect(()=>{
    console.log(datas,"datsss")
- setTimeout(()=>{
+
   setData(datas)
- },500)
+
  },[setData,datas])
   return (
     
