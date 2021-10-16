@@ -25,7 +25,6 @@ function LinksScreen() {
     
   }, []);
   useEffect(()=>{
-    console.log("ha")
     const BrokenInternal=[]
     const BrokenExternal=[]
     const InternalLinks = Object.entries(allPosts).filter((post) =>

@@ -4,7 +4,6 @@ import "../Css/FilterPostCss.css";
 function FilterPosts({ Heading, datas }) {
   const [data, setData] = useState([]);
   useEffect(() => {
-    console.log("data", typeof datas, Heading, datas);
     setTimeout(() => {
       setData(datas);
     }, 100);
