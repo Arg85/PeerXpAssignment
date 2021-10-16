@@ -4,6 +4,7 @@ import "../Css/FilterPostCss.css";
 function FilterLinks({ Heading, datas }) {
  const [data, setData] = useState([])
  useEffect(()=>{
+   console.log(datas,"datsss")
  setTimeout(()=>{
   setData(datas)
  },500)
@@ -25,7 +26,7 @@ function FilterLinks({ Heading, datas }) {
           <h4>{Heading}</h4>
           {data.length>0?data.map((a)=>{
   return <h5><a  rel="noreferrer" target="_blank" href={a} key={a}>{a}</a></h5>
-}):<>"No Broken Internal Links"</>}
+}):<h5>No Broken Internal Links</h5>}
         
         </>
       )}
